@@ -3,49 +3,44 @@
         margin: 0px;
         font-family: Arial, Helvetica, sans-serif;
     }
+    /* GRID */
     
     .contenedor {
         display: grid;
+        grid-template-columns: 70%;
+        /* grid-template-rows: 20% 70% 20%; */
+        grid-template-rows: auto;
         align-items: center;
         justify-content: center;
     }
     
     .contenedor-principal {
+        background: rgb(20, 20, 20);
         display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
         align-items: center;
-        justify-content: center;
     }
-    
-    .menu-completo {
-        display: grid;
-        grid-template-columns: 100%;
-    }
-    
-    .platos-menu {
-        display: grid;
-        grid-template-columns: 100%;
-    }
-    
-    .side {
-        background: rgb(255, 255, 255);
-    }
+    /* ESTILOS */
     
     .menu {
-        background: rgb(20, 20, 20);
         color: white;
         padding: 20px;
+    }
+    
+    .menu p {
+        font-weight: bold;
     }
     
     .header {
         background: rgb(255, 255, 255);
         display: grid;
-        grid-template-columns: 100%;
         grid-template-rows: 50% 50%;
         text-align: center;
         justify-content: center;
         align-items: center;
-        min-height: 250px;
         margin: 20px;
+        /* padding: 10px; */
     }
     
     ul {
@@ -58,8 +53,12 @@
         margin: 50px;
     }
     
-    .header img {
-        width: 20%;
+    .logo {
+        width: 100%;
+    }
+    
+    .logo img {
+        width: 200px;
         margin-top: 20px;
     }
     
@@ -76,16 +75,10 @@
         text-align: center;
         display: grid;
         grid-template-rows: 90% 10%;
-        align-items: center;
-        justify-content: center;
     }
     
     .footer p {
-        padding: 10px;
-    }
-    
-    .menu p {
-        font-weight: bold;
+        margin: 10px;
     }
     
     .comida {
@@ -95,14 +88,100 @@
         margin: 5px;
     }
     
-    .social-media {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    
     .social-media-footer {
         display: flex;
         align-items: center;
         justify-content: space-evenly;
+    }
+    
+    .social-media-footer-icons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .social-media-footer-icons a {
+        padding: 10px;
+    }
+    
+    .social-media {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        margin: 10px;
+    }
+    /* RESPONSIVE */
+    
+    @media (max-width: 900px) {
+        .contenedor {
+            grid-template-columns: 85%;
+        }
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: center;
+        }
+        ul li {
+            margin: 20px;
+        }
+        .social-media i {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .header {
+            background: rgb(255, 255, 255);
+            display: grid;
+            grid-template-rows: 50% 50%;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            margin: 20px;
+        }
+        .header img {
+            width: 200px;
+            margin-top: 10%;
+        }
+        .footer {
+            margin: 5px;
+            padding: 10px;
+            text-align: center;
+            display: grid;
+            grid-template-rows: auto;
+            justify-content: center;
+            align-items: stretch;
+        }
+        .footer p {
+            margin: 10px;
+        }
+        .comida {
+            display: flex;
+            align-items: center;
+            /* justify-content: space-between; */
+            margin: 5px;
+        }
+        .social-media {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .social-media-footer {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+    }
+    /* -------------------------------------- */
+    
+    ul.acorh li:hover ul {
+        max-height: 300px;
+        transition: .3s all ease-in;
+    }
+    
+    ul.acorh li a:hover {
+        background: #666;
+        color: #fff;
     }
