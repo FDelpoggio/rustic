@@ -174,14 +174,3 @@
             justify-content: space-evenly;
         }
     }
-    /* -------------------------------------- */
-    
-    ul.acorh li:hover ul {
-        max-height: 300px;
-        transition: .3s all ease-in;
-    }
-    
-    ul.acorh li a:hover {
-        background: #666;
-        color: #fff;
-    }
